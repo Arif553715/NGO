@@ -1,12 +1,15 @@
 from django.shortcuts import render,HttpResponse,get_object_or_404
-from .models import Author1,Artical,Catagory
+from .models import Author1,Artical,Catagory,Our_Team
 # Create your views here.
 
 # start blogapp
 
 def about(request):
-    post=Artical.objects.all()
-    return render(request,'about.html',{'post':post})
+    context={'post':Artical.objects.all(),
+             'teams':Our_Team.objects.all()}
+    return render(request,'about.html',context)
+
+
 
 def getauthor(request,name):
     return render(request,'profile.html')

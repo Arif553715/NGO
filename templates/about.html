@@ -135,39 +135,23 @@
 		<div class="container">
 
 			<div class="row fadeIn animated">
-
+			{% for about in post%}
 				<div class="col-md-6">
 
-					<img src="{% static 'assets/images/about-us.jpg'%}" alt="" class="img-responsive">
+					<img src="{{ about.image.url }}" alt="" class="img-responsive">
 
 				</div>
 
 				<div class="col-md-6">
 
-					<h2 class="title-style-2">ABOUT SADAKA <span class="title-under"></span></h2>
+					<h2 class="title-style-2">ABOUT {{about.ngo_name}} <span class="title-under"></span></h2>
 
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nulla quae possimus id fugit totam perspiciatis ad consequatur natus dolores unde ipsa, architecto, dignissimos corrupti explicabo provident debitis suscipit, beatae!
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi pariatur, voluptatum molestiae voluptas ducimus tempora numquam eligendi quos, quia aut quidem et, odio deleniti amet natus accusamus fugit! Temporibus, tenetur.
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, ea, quisquam vero ullam nesciunt recusandae expedita similique nisi! Ducimus, reiciendis, quia. Explicabo minima error excepturi minus, aperiam illum fugit.
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi pariatur, voluptatum molestiae voluptas ducimus tempora numquam eligendi quos, quia aut quidem et, odio deleniti amet natus accusamus fugit! Temporibus, tenetur.
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, ea, quisquam vero ullam nesciunt recusandae expedita similique nisi! Ducimus, reiciendis, quia. Explicabo minima error excepturi minus, aperiam illum fugit , quia. Explicabo minima error excepturi minus, aperiam illum fugit.
-
+						{{about.body}}
 					</p>
 					
 				</div>
+				{% endfor %}
 
 			</div> <!-- /.row -->
 
@@ -272,23 +256,23 @@
 	            <h2 class="title-style-1">Our Team <span class="title-under"></span></h2>
 
 	            <div class="row">
-
+				{% for p in teams %}
 	                <div class="col-md-3 col-sm-6">
 
 	                    <div class="team-member">
 
 	                        <div class="thumnail">
 
-	                            <img src="{% static 'assets/images/team/member-1.jpg'%}" alt="" class="cause-img">
+	                            <img src="{{ p.member_image.url }}" alt="" class="cause-img">
 	                            
 	                        </div>
 
 
 
-	                        <h4 class="member-name"><a href="#">Robert C. Numbers</a></h4>
+	                        <h4 class="member-name"><a href="#">{{ p.member_name }}</a></h4>
 
 	                        <div class="member-position">
-	                            CO-FOUNDER
+	                            {{ p.position }}
 	                        </div>
 
 	                        <div class="btn-holder">
@@ -306,110 +290,7 @@
 	                    </div> <!-- /.team-member -->
 	                    
 	                </div>
-
-	                <div class="col-md-3 col-sm-6">
-
-	                    <div class="team-member">
-
-	                        <div class="thumnail">
-
-	                            <img src="{% static 'assets/images/team/member-3.jpg'%}" alt="" class="cause-img">
-	                            
-	                        </div>
-
-
-
-	                        <h4 class="member-name"><a href="#">Marjorie R. Echevarria</a></h4>
-
-	                        <div class="member-position">
-	                            CO-FOUNDER
-	                        </div>
-
-	                        <div class="btn-holder">
-
-	                          <a href="#" class="btn"> <i class="fa fa-envelope"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-facebook"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-google"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-twitter"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-linkedin"></i> </a>
-	                          
-	                        </div>
-
-	                        
-
-	                    </div> <!-- /.team-member -->
-	                    
-	                </div>
-
-
-	                <div class="col-md-3 col-sm-6">
-
-	                    <div class="team-member">
-
-	                        <div class="thumnail">
-
-	                            <img src="{% static 'assets/images/team/member-4.jpg'%}" alt="" class="cause-img">
-	                            
-	                        </div>
-
-
-
-	                        <h4 class="member-name"><a href="#">Allison J. Falls</a></h4>
-
-	                        <div class="member-position">
-	                            CO-FOUNDER
-	                        </div>
-
-	                        <div class="btn-holder">
-
-	                          <a href="#" class="btn"> <i class="fa fa-envelope"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-facebook"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-google"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-twitter"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-linkedin"></i> </a>
-	                          
-	                        </div>
-
-	                        
-
-	                    </div> <!-- /.team-member -->
-	                    
-	                </div>
-
-
-	                <div class="col-md-3 col-sm-6">
-
-	                    <div class="team-member">
-
-	                        <div class="thumnail">
-
-	                            <img src="{% static 'assets/images/team/member-2.jpg'%}" alt="" class="cause-img">
-	                            
-	                        </div>
-
-
-
-	                        <h4 class="member-name"><a href="#">Bryan B. Stevens</a></h4>
-
-	                        <div class="member-position">
-	                            CO-FOUNDER
-	                        </div>
-
-	                        <div class="btn-holder">
-
-	                          <a href="#" class="btn"> <i class="fa fa-envelope"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-facebook"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-google"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-twitter"></i> </a>
-	                          <a href="#" class="btn"> <i class="fa fa-linkedin"></i> </a>
-	                          
-	                        </div>
-
-	                        
-
-	                    </div> <!-- /.team-member -->
-	                    
-	                </div>
+					{% endfor %}
 
 	            </div> <!-- /.row -->
 

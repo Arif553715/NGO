@@ -16,11 +16,20 @@ class Catagory(models.Model):
 
 class Artical(models.Model):
     artical_author=models.ForeignKey(Author1, on_delete=models.CASCADE)
-    title=models.CharField(max_length=100)
+    ngo_name=models.CharField(max_length=100)
     body=models.TextField()
     image=models.FileField()
     posted_on=models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True, auto_now_add=False)
     catagory=models.ForeignKey(Catagory,on_delete=models.CASCADE)
     def __str__(self):
-        return self.title
+        return self.ngo_name
+
+
+
+class Our_Team(models.Model):
+    member_name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    member_image = models.FileField()
+    def __str__(self):
+        return self.member_name

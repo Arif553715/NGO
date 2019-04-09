@@ -17,7 +17,7 @@ class Catagory(models.Model):
 class Artical(models.Model):
     artical_author=models.ForeignKey(Author, on_delete=models.CASCADE)
     title=models.CharField(max_length=100)
-    body=models.TextField()
+    body=models.TextField(max_length=175)
     image=models.FileField()
     posted_on=models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True, auto_now_add=False)
