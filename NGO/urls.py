@@ -21,4 +21,6 @@ urlpatterns = [
     path('', include("blogapp.urls")),
     path('', include("ABOUT.urls")),
     path('', include("GALLERY.urls")),
+    path('', include("Causes_list.urls")),
+    path('', include("videos_gallery.urls")),
 ]

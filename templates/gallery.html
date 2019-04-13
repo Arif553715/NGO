@@ -95,17 +95,23 @@
 
                     <li><a href="{% url 'index'%}">HOME</a></li>
                     <li><a href="{% url 'about'%}">ABOUT</a></li>
-                    <li class="has-child"><a href="#">CAUSES</a>
+                    <li class="has-child"><a href="{% url 'Causes_list' %}">CAUSES</a>
 
                       <ul class="submenu">
-                         <li class="submenu-item"><a href="causes.html">Causes list </a></li>
-                         <li class="submenu-item"><a href="causes-single.html">Single cause </a></li>
-                         <li class="submenu-item"><a href="causes-single.html">Single cause </a></li>
-                         <li class="submenu-item"><a href="causes-single.html">Single cause </a></li>
+                         <li class="submenu-item"><a href="{% url 'Causes_list' %}">Causes list </a></li>
+                         <!--<li class="submenu-item"><a href="causes-single.html">Single cause </a></li>-->
+                         <!--<li class="submenu-item"><a href="causes-single.html">Single cause </a></li>-->
+                         <!--<li class="submenu-item"><a href="causes-single.html">Single cause </a></li>-->
                       </ul>
 
                     </li>
-                    <li><a class="is-active" href="{% url 'gallery'%}">GALLERY</a></li>
+                    <li class="has-child"><a href="{% url 'gallery'%}">GALLERY</a>
+                        <ul class="submenu">
+                             <li class="submenu-item"><a href="{% url 'gallery'%}">PHOTO GALLERY </a></li>
+                             <li class="submenu-item"><a href="{% url 'videos_gallery'%}">VIDEOS GALLERY </a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="contact.html">CONTACT</a></li>
 
                   </ul>

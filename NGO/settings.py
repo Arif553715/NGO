@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blogapp',
     'ABOUT',
     'GALLERY',
+    'Causes_list',
+    'videos_gallery',
 ]
 
 MIDDLEWARE = [
