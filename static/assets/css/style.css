@@ -120,6 +120,11 @@ a:hover, a:focus, a:active {
   background: #fff;
 }
 
+.logo img{
+    margin-top: -16px;
+    border-radius: 40px;
+}
+
 /* Home Slider 
 ================================= */
 .carousel-home img {
@@ -530,7 +535,7 @@ form .alert {
 .title-style-2 {
   text-align: left;
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 21px;
   margin-bottom: 25px;
 }
 .title-style-2 .title-under {

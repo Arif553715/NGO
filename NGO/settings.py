@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'GALLERY',
     'Causes_list',
     'videos_gallery',
+    'CONTACT_US',
 ]
 
 MIDDLEWARE = [
